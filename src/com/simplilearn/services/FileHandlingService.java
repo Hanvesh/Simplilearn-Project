@@ -8,23 +8,23 @@ import java.util.Scanner;
 
 public class FileHandlingService {
 
-    private static final String FILE_PATH = "/var/www/html/files/";
+    private static final String FILE_PATH = "/var/www/html/SimplilearnProjectFiles/";
     private String userInput;
     private Scanner scanner;
 
-    public void startTheApp(){
+    public void startHandlingFiles(){
         welcomeScreen();
         initScanner();
-        initMainMenu();
+        initalizeMainMenu();
     }
 
-    private void initMainMenu(){
+    private void initalizeMainMenu(){
         showMainMenu();
         handleMainMenu();
     }
 
     private void welcomeScreen(){
-        System.out.println("Welcome to The File Manager!");
+        System.out.println("Welcome to The File Handling Service of Simplilearn!");
         System.out.println("Developer: Hanvesh");
     }
 
@@ -52,7 +52,7 @@ public class FileHandlingService {
                     showManageFileOptions();
                     break;
                 case "3":
-                    exitApp();
+                    exitHandlingFiles();
                     break;
                 default:
                     System.out.println("Please enter a valid option");
@@ -191,7 +191,7 @@ public class FileHandlingService {
         showManageFileOptions();
     }
 
-    private void exitApp(){
+    private void exitHandlingFiles(){
         System.out.println("Thank you for Utilising our Service");
         scanner.close();
     }
